@@ -1,13 +1,10 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-const element = <div>JSX</div>;
-//  const element = 123;
+import App from './components/App';
 
 
 ReactDOM.render(
-    element,
+    <App />,
     document.getElementById('root')
 )
