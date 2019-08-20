@@ -1,21 +1,28 @@
 import React from 'react';
-import Message from './Message';
+import Message from '../components/Message';
 
-export default class MessageField extends React.Component{
-    state = {
-      messages: ['mes1', 'mes2', 'mes3']    
-    };
+export default class MessageField extends React.Component {
+    // state = {
+    //   messages: ['mes1', 'mes2', 'mes3']    
+    // };
+
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+            messages: ['mes1', 'mes2', 'mes3']
+        };
+      }
 
     render(){
-        const messages = this.state.messages.map((elem) => {
+        let messages1 = this.state.messages.map((elem) => {
             <Message text = {elem}/>
         });
 
         return(
+            alert(messages1),
             <div>
-                <Message text = 'message 1'/>
-                <Message text = 'message 2'/>
-                <Message text = 'message 3'/>
+                { messages1 }
             </div>
         );
     }
