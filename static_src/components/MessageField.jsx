@@ -15,7 +15,7 @@ export default class MessageField extends React.Component {
       }
 
     render(){
-        let messages1 = this.state.messages.map((elem) => {
+        var messages1 = this.state.messages.map((elem) => {
             <Message text = {elem}/>
         });
 
