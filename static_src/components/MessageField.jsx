@@ -1,7 +1,8 @@
 import React from 'react';
-import Message from '../components/Message';
+import Message from './Message';
 
 export default class MessageField extends React.Component {
+    // У препода работает у меня нет why?
     // state = {
     //   messages: ['mes1', 'mes2', 'mes3']    
     // };
@@ -13,14 +14,20 @@ export default class MessageField extends React.Component {
             messages: ['mes1', 'mes2', 'mes3']
         };
       }
-
+    
     render(){
-        var messages1 = this.state.messages.map((elem) => {
-            <Message text = {elem}/>
+        
+        // let messages1 = this.state.messages.map((elem) => {
+        //     <Message text = {elem}/>
+        // });
+        
+        let messages1 = this.state.messages.map((e)=>{
+            // Сюда после 4 итеррации приходят три undefined, почему?
+            // debugger;
+            <Message text = {e} />
         });
-
+        
         return(
-            alert(messages1),
             <div>
                 { messages1 }
             </div>
